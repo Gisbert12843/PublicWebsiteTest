@@ -1,11 +1,17 @@
-* {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
   padding: 0;
   margin: 0;
 }
 
 html {
   height: 100%;
+  font-size: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -16,19 +22,74 @@ body {
 }
 
 .the_grid {
+  display: grid;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  display: grid;
   width: 100vw;
   height: 100vh;
-  border-style: solid;
+  grid-template-columns: 0.8fr 1fr 1fr 1fr;
+  grid-template-rows: 0.24fr 1fr 1fr 1fr;
+  grid-template-areas: "navb navb navb navb" "sb c1 c1 c1" "sb c1 c1 c1" "sb c2 c2 c2";
+}
+
+.navbar {
+  grid-area: navb;
+  display: inline-flex;
+  overflow: hidden;
+  min-width: 100%;
+  max-width: 100%;
+  background-color: #ff1a4f;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: inline-flex;
+  color: transparent;
+}
+
+.navbar ul li {
+  padding: 20px;
+  display: inline;
+}
+
+.navbar a {
+  display: block;
+  color: #e4e4e4;
+  text-decoration: none;
+}
+
+.dropdown {
+  display: none;
+}
+
+.sidebar {
+  grid-area: sb;
+  overflow: hidden;
+  min-width: 100%;
+  max-width: 100%;
+  border-style: dashed;
+  border-color: green;
+}
+
+.content1 {
+  grid-area: c1;
+  overflow: hidden;
+  min-width: 100%;
+  max-width: 100%;
+  border-style: dashed;
+  border-color: yellow;
+}
+
+.content2 {
+  grid-area: c2;
+  overflow: hidden;
+  min-width: 100%;
+  max-width: 100%;
+  border-style: dashed;
   border-color: red;
-  gap: 5px;
-  grid-gap: 5px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-areas: "nav nav nav nav" "sb c1 c1 c1" "sb c1 c1 c1" "sb c2 c2 c2";
 }

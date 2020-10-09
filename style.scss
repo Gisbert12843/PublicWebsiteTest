@@ -1,11 +1,17 @@
-* {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
     padding: 0;
     margin: 0;
 }
 
 html {
     height: 100%;
+    font-size: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -16,27 +22,109 @@ body {
 }
 
 .the_grid {
+    display: grid;
     position: fixed;
+
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-
-    display: grid;
     width: 100vw;
     height: 100vh;
 
-    border-style: solid;
-    border-color: red;
+    // border-style: solid;
+    // border-color: red;
 
-    gap: 5px;
-    grid-gap: 5px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    // gap: 5px;
+    // grid-gap: 5px;
+
+    grid-template-columns: 0.8fr 1fr 1fr 1fr;
+    grid-template-rows: 0.24fr 1fr 1fr 1fr;
+
 
     grid-template-areas:
-        "nav nav nav nav"
+        "navb navb navb navb"
         "sb c1 c1 c1"
         "sb c1 c1 c1"
         "sb c2 c2 c2";
+}
+
+.navbar {
+    grid-area: navb;
+    display: inline-flex;       //lets us align items
+    overflow: hidden;
+
+    // margin-left: 1vw;
+    // padding-left: 1vw;
+    // border-radius: 1rem;
+    min-width: 100%;
+    max-width: 100%;
+    // border-style: dashed;
+    // border-color: blue;
+    background-color: hsl(346, 100%, 55%);
+
+    // text-align: center;     //links in die horizontale mitte
+    // align-items: center;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.navbar ul {
+    list-style: none;       //aufzählzeichen entfernen
+    display: inline-flex;   //links nebeneinander
+    color: transparent;
+}
+
+.navbar ul li
+{
+    // margin: 0;
+    padding: 20px;
+    display: inline;
+
+}
+.navbar a
+{
+    display: block;         //makes more area clickable!?
+    color: rgb(228, 228, 228);
+    text-decoration: none;
+}
+
+.dropdown{
+    display: none;
+}
+
+
+
+
+
+.sidebar {
+    grid-area: sb;
+    overflow: hidden;
+
+    min-width: 100%;
+    max-width: 100%;
+    border-style: dashed;
+    border-color: green;
+}
+
+.content1 {
+    grid-area: c1;
+    overflow: hidden;
+
+    min-width: 100%;
+    max-width: 100%;
+    border-style: dashed;
+    border-color: yellow;
+}
+
+.content2 {
+    grid-area: c2;
+    overflow: hidden;
+
+    min-width: 100%;
+    max-width: 100%;
+    border-style: dashed;
+    border-color: red;
 }
