@@ -7,7 +7,8 @@
 }
 
 html {
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
   font-size: 100%;
   box-sizing: border-box;
   padding: 0;
@@ -53,17 +54,18 @@ body {
 }
 
 .navbar ul li {
-  padding: 20px;
+  font-size: 1.5rem;
+  padding: 23px;
   display: inline;
 }
 
-.navbar a {
+.navbar ul li a {
   display: block;
   color: #e4e4e4;
   text-decoration: none;
 }
 
-.dropdown {
+.the_grid .navbar .dropdown {
   display: none;
 }
 
