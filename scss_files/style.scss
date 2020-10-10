@@ -1,3 +1,6 @@
+@import "global";
+
+
 *,
 *::before,
 *::after {
@@ -42,7 +45,7 @@ body {
     // gap: 5px;
     // grid-gap: 5px;
 
-    grid-template-columns: 0.8fr 1fr 1fr 1fr;
+    grid-template-columns: 0.6fr 1fr 1fr 1fr;
     grid-template-rows: 0.24fr 1fr 1fr 1fr;
 
 

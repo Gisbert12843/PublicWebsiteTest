@@ -32,7 +32,7 @@ body {
   bottom: 0;
   width: 100vw;
   height: 100vh;
-  grid-template-columns: 0.8fr 1fr 1fr 1fr;
+  grid-template-columns: 0.6fr 1fr 1fr 1fr;
   grid-template-rows: 0.24fr 1fr 1fr 1fr;
   grid-template-areas: "navb navb navb navb" "sb c1 c1 c1" "sb c1 c1 c1" "sb c2 c2 c2";
 }
