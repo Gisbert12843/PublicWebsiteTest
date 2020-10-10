@@ -106,6 +106,7 @@ body {
 
 .navbar ul li:hover {
     background-color: $hover-color;
+    transition: 0.4s;
 }
 
 .the_grid .navbar .dropdown-content {

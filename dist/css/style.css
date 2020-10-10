@@ -81,6 +81,7 @@ body {
 
 .navbar ul li:hover {
   background-color: #ff8c00;
+  transition: 0.4s;
 }
 
 .the_grid .navbar .dropdown-content {
