@@ -1,3 +1,7 @@
+$navbar-red1: #d61d4b;
+$navbar-red2: hsl(346, 100%, 55%);
+$font-color-offwhite:  rgb(228, 228, 228);
+
 *,
 *::before,
 *::after {
@@ -14,15 +18,14 @@ html {
     padding: 0;
     margin: 0;
 
-
-    background: url(/images/background2.jpg) no-repeat center center fixed; 
+    background: url(/images/background2.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 
 body {
     margin: 0;
     padding: 0;
-    min-height: 100%;
+    min-height: 100vh;
 }
 
 .the_grid {
@@ -45,7 +48,6 @@ body {
     grid-template-columns: 0.6fr 1fr 1fr 1fr;
     grid-template-rows: 0.24fr 1fr 1fr 1fr;
 
-
     grid-template-areas:
         "navb navb navb navb"
         "sb c1 c1 c1"
@@ -55,7 +57,7 @@ body {
 
 .navbar {
     grid-area: navb;
-    display: inline-flex;       //lets us align items
+    display: inline-flex; //lets us align items
     overflow: hidden;
     position: fixed;
 
@@ -66,43 +68,42 @@ body {
     max-width: 100%;
     // border-style: dashed;
     // border-color: blue;
-    background-color: hsl(346, 100%, 55%);
+    background-color: $navbar-red2;
 
     // text-align: center;     //links in die horizontale mitte
     // align-items: center;
     justify-content: center;
     align-items: center;
-
-
 }
 
 .navbar ul {
-    list-style: none;       //aufzählzeichen entfernen
-    display: inline-flex;   //links nebeneinander
+    list-style: none; //aufzählzeichen entfernen
+    display: inline-flex; //links nebeneinander
     color: transparent;
     // text-align: center;
 }
 
-.navbar ul li
-{
+.navbar ul li {
     font-size: 1.5rem;
     padding: 23px;
     display: inline;
-
 }
-.navbar ul li a
-{
-    display: inline-block;         //makes more area clickable!?
+.navbar ul li a {
+    display: inline-block; //makes more area clickable!?
     position: relative;
     z-index: 1;
-    color: rgb(228, 228, 228);
+    color: $font-color-offwhite;
     text-decoration: none;
     padding: 50% 2rem;
     margin: -50% -2rem;
     // text-align: center;
 }
 
-.the_grid .navbar .dropdown
-{
+.the_grid .navbar .active {
+    background-color: #ff573a;
+}
+
+.the_grid .navbar .dropdown {
     display: none;
 }
+
