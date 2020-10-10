@@ -1,6 +1,8 @@
-$navbar-red1: #d61d4b;
-$navbar-red2: hsl(346, 100%, 55%);
-$font-color-offwhite:  rgb(228, 228, 228);
+$navbar-color1: #d61d4b;
+$navbar-color2: hsl(346, 100%, 55%);
+$font-color:  rgb(228, 228, 228);
+$active-color: #ff573a;
+$hover-color:  #FF8C00;
 
 *,
 *::before,
@@ -20,12 +22,16 @@ html {
 
     background: url(/images/background2.jpg) no-repeat center center fixed;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0px 3.5rem;
 }
 
 body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    max-width: 100vw;
 }
 
 .the_grid {
@@ -68,7 +74,7 @@ body {
     max-width: 100%;
     // border-style: dashed;
     // border-color: blue;
-    background-color: $navbar-red2;
+    background-color: $navbar-color2;
 
     // text-align: center;     //links in die horizontale mitte
     // align-items: center;
@@ -80,6 +86,7 @@ body {
     list-style: none; //aufzählzeichen entfernen
     display: inline-flex; //links nebeneinander
     color: transparent;
+    position: relative;
     // text-align: center;
 }
 
@@ -92,18 +99,25 @@ body {
     display: inline-block; //makes more area clickable!?
     position: relative;
     z-index: 1;
-    color: $font-color-offwhite;
+    color: $font-color;
     text-decoration: none;
     padding: 50% 2rem;
     margin: -50% -2rem;
     // text-align: center;
 }
 
-.the_grid .navbar .active {
-    background-color: #ff573a;
+.active {
+    background-color: $active-color;
 }
 
-.the_grid .navbar .dropdown {
+.navbar ul li:hover
+{
+    background-color: $hover-color;
+}
+
+
+
+.the_grid .navbar .dropdown-content {
     display: none;
 }
 
