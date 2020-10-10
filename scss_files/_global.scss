@@ -1,0 +1,108 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100vh;
+    width: 100vw;
+    font-size: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+
+    background: url(/images/background2.jpg) no-repeat center center fixed; 
+    background-size: cover;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+.the_grid {
+    display: grid;
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+
+    // border-style: solid;
+    // border-color: red;
+
+    // gap: 5px;
+    // grid-gap: 5px;
+
+    grid-template-columns: 0.6fr 1fr 1fr 1fr;
+    grid-template-rows: 0.24fr 1fr 1fr 1fr;
+
+
+    grid-template-areas:
+        "navb navb navb navb"
+        "sb c1 c1 c1"
+        "sb c1 c1 c1"
+        "sb c2 c2 c2";
+}
+
+.navbar {
+    grid-area: navb;
+    display: inline-flex;       //lets us align items
+    overflow: hidden;
+    position: fixed;
+
+    // margin-left: 1vw;
+    // padding-left: 1vw;
+    // border-radius: 1rem;
+    min-width: 100%;
+    max-width: 100%;
+    // border-style: dashed;
+    // border-color: blue;
+    background-color: hsl(346, 100%, 55%);
+
+    // text-align: center;     //links in die horizontale mitte
+    // align-items: center;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.navbar ul {
+    list-style: none;       //aufzählzeichen entfernen
+    display: inline-flex;   //links nebeneinander
+    color: transparent;
+    // text-align: center;
+}
+
+.navbar ul li
+{
+    font-size: 1.5rem;
+    padding: 23px;
+    display: inline;
+
+}
+.navbar ul li a
+{
+    display: inline-block;         //makes more area clickable!?
+    position: relative;
+    z-index: 1;
+    color: rgb(228, 228, 228);
+    text-decoration: none;
+    padding: 50% 2rem;
+    margin: -50% -2rem;
+    // text-align: center;
+}
+
+.the_grid .navbar .dropdown
+{
+    display: none;
+}
