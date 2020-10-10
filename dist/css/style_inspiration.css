@@ -1,7 +1,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -37,43 +37,42 @@ body {
   width: 100vw;
   height: 100vh;
   grid-template-columns: 0.6fr 1fr 1fr 1fr;
-  grid-template-rows: 0.24fr 1fr 1fr 1fr;
+  grid-template-rows: 0.22fr 1fr 1.5fr 0.5fr;
   grid-template-areas: "navb navb navb navb" "sb c1 c1 c1" "sb c1 c1 c1" "sb c2 c2 c2";
 }
 
 .navbar {
   grid-area: navb;
-  display: inline-flex;
-  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
   position: fixed;
   min-width: 100%;
   max-width: 100%;
   background-color: #ff1a4f;
+  text-align: center;
   justify-content: center;
   align-items: center;
 }
 
 .navbar ul {
   list-style: none;
-  display: inline-flex;
+  display: flex;
   color: transparent;
   position: relative;
 }
 
 .navbar ul li {
-  font-size: 1.5rem;
-  padding: 23px;
   display: inline;
 }
 
 .navbar ul li a {
-  display: inline-block;
+  font-size: 1.5rem;
+  padding: 23px;
+  display: block;
   position: relative;
   z-index: 1;
   color: #e4e4e4;
   text-decoration: none;
-  padding: 50% 2rem;
-  margin: -50% -2rem;
 }
 
 .active {
@@ -81,7 +80,7 @@ body {
 }
 
 .navbar ul li:hover {
-  background-color: #FF8C00;
+  background-color: #ff8c00;
 }
 
 .the_grid .navbar .dropdown-content {

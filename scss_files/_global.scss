@@ -1,13 +1,13 @@
 $navbar-color1: #d61d4b;
 $navbar-color2: hsl(346, 100%, 55%);
-$font-color:  rgb(228, 228, 228);
+$font-color: rgb(228, 228, 228);
 $active-color: #ff573a;
-$hover-color:  #FF8C00;
+$hover-color: #ff8c00;
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
@@ -52,7 +52,7 @@ body {
     // grid-gap: 5px;
 
     grid-template-columns: 0.6fr 1fr 1fr 1fr;
-    grid-template-rows: 0.24fr 1fr 1fr 1fr;
+    grid-template-rows: 0.22fr 1fr 1.5fr 0.5fr;
 
     grid-template-areas:
         "navb navb navb navb"
@@ -63,46 +63,40 @@ body {
 
 .navbar {
     grid-area: navb;
-    display: inline-flex; //lets us align items
-    overflow: hidden;
+    display: flex; //lets us align items
+    flex-wrap: wrap;
+    // overflow: hidden;
     position: fixed;
 
-    // margin-left: 1vw;
-    // padding-left: 1vw;
-    // border-radius: 1rem;
     min-width: 100%;
     max-width: 100%;
-    // border-style: dashed;
-    // border-color: blue;
     background-color: $navbar-color2;
 
-    // text-align: center;     //links in die horizontale mitte
-    // align-items: center;
+    text-align: center; //links in die horizontale mitte
     justify-content: center;
     align-items: center;
 }
 
 .navbar ul {
     list-style: none; //aufzählzeichen entfernen
-    display: inline-flex; //links nebeneinander
+    display: flex; //links nebeneinander
     color: transparent;
     position: relative;
     // text-align: center;
 }
 
 .navbar ul li {
-    font-size: 1.5rem;
-    padding: 23px;
     display: inline;
 }
 .navbar ul li a {
-    display: inline-block; //makes more area clickable!?
+    font-size: 1.5rem;
+    padding: 23px;
+    display: block; //makes more area clickable!?
     position: relative;
     z-index: 1;
     color: $font-color;
     text-decoration: none;
-    padding: 50% 2rem;
-    margin: -50% -2rem;
+
     // text-align: center;
 }
 
@@ -110,14 +104,10 @@ body {
     background-color: $active-color;
 }
 
-.navbar ul li:hover
-{
+.navbar ul li:hover {
     background-color: $hover-color;
 }
-
-
 
 .the_grid .navbar .dropdown-content {
     display: none;
 }
-
