@@ -25,6 +25,7 @@ html {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 0px 3.5rem;
+    z-index: 0;
 }
 
 body {
@@ -64,17 +65,22 @@ body {
 .navbar {
     grid-area: navb;
     display: flex; //lets us align items
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     // overflow: hidden;
-    position: fixed;
+    // position: relative;
+    z-index: 999;
 
     min-width: 100%;
     max-width: 100%;
     background-color: $navbar-color2;
 
-    text-align: center; //links in die horizontale mitte
+    // text-align: center; //links in die horizontale mitte
     justify-content: center;
     align-items: center;
+}
+
+.active {
+    background-color: $active-color;
 }
 
 .navbar ul {
@@ -86,8 +92,10 @@ body {
 }
 
 .navbar ul li {
-    display: inline;
+    // display: inline;
+    position: relative;
 }
+
 .navbar ul li a {
     font-size: 1.5rem;
     padding: 23px;
@@ -100,15 +108,63 @@ body {
     // text-align: center;
 }
 
-.active {
-    background-color: $active-color;
-}
-
-.navbar ul li:hover {
+.navbar ul li a:hover {
     background-color: $hover-color;
-    transition: 0.4s;
+    transition: 0.08s;
 }
 
-.the_grid .navbar .dropdown-content {
+
+
+
+
+.dropdown-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+}
+
+.the_grid .navbar .dropdown-content li {
     display: none;
+    position: relative;
+}
+
+.navbar ul li:hover .dropdown-content {
+    position: absolute;
+    width: auto;
+    top: 100%;
+    z-index: 999;
+}
+
+.navbar ul li:hover .dropdown-content li {
+    display: block;
+    // top: 0px;
+}
+
+
+
+
+
+
+
+
+.navbar ul li:hover .dropdown-class {
+    display: list-item;
+    position: absolute;
+    background: #ff8c00;
+}
+
+.navbar ul li:hover .dropdown-class ul {
+    display: block;
+    margin: auto;
+}
+
+.navbar ul li:hover .dropdown-class ul li {
+    font-size: 18px;
+    width: auto;
+    padding: 10px;
+    border-bottom: 1px ridge #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
 }
