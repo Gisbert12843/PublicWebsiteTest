@@ -1,0 +1,87 @@
+.navbar {
+    grid-area: navb;
+    display: flex; //lets us align items
+    // flex-wrap: wrap;
+    // overflow: hidden;
+    // position: relative;
+    z-index: 1;
+
+    min-width: 100%;
+    max-width: 100%;
+    background-color: $navbar-color2;
+
+    // text-align: center; //links in die horizontale mitte
+    justify-content: center;
+    align-items: center;
+}
+
+.active {
+    background-color: $active-color;
+}
+
+.navbar ul {
+    list-style: none; //aufzählzeichen entfernen
+    display: flex; //links nebeneinander
+    color: transparent;
+    position: relative;
+    // text-align: center;
+}
+
+.navbar ul li {
+    // display: inline;
+    position: relative;
+}
+
+.navbar ul li a {
+    font-size: 1.5rem;
+    padding: 23px;
+    display: block; //makes more area clickable!?
+    position: relative;
+    z-index: 1;
+    color: $font-color;
+    text-decoration: none;
+
+    // text-align: center;
+}
+
+.navbar ul li:hover {
+    background-color: $hover-color;
+    transition: 0.08s;
+}
+
+.dropdown-class {
+    display: none;
+}
+
+.navbar ul li:hover .dropdown-class {
+    display: list-item;
+    position: fixed;
+    background: #ff8c00;
+    // margin-top: 20px;
+    // margin-left: -20px;
+
+}
+
+.navbar ul li:hover .dropdown-class ul {
+    display: block;
+    // margin: auto;
+}
+
+.navbar ul li:hover .dropdown-class ul li {
+    font-size: 18px;
+    width: auto;
+    // padding: 10px;
+    border-bottom: 1px ridge #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover .dropdown-class ul li:last-child {
+    border-bottom: none;
+}
+
+.navbar ul li:hover .dropdown-class ul li a:hover {
+    background-color: tomato;
+}

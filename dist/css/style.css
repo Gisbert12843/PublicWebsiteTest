@@ -28,6 +28,12 @@ body {
   max-width: 100vw;
 }
 
+.snap-wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
 .the_grid {
   display: grid;
   position: fixed;
@@ -39,13 +45,16 @@ body {
   height: 100vh;
   grid-template-columns: 0.6fr 1fr 1fr 1fr;
   grid-template-rows: 0.22fr 1fr 1.5fr 0.5fr;
-  grid-template-areas: "navb navb navb navb" "sb c1 c1 c1" "sb c1 c1 c1" "sb c2 c2 c2";
+  grid-template-areas: "navb navb navb navb"
+ "sb c1 c1 c1"
+ "sb c1 c1 c1"
+ "sb c1 c1 c1";
 }
 
 .navbar {
   grid-area: navb;
   display: flex;
-  z-index: 999;
+  z-index: 1;
   min-width: 100%;
   max-width: 100%;
   background-color: #ff1a4f;
@@ -78,58 +87,45 @@ body {
   text-decoration: none;
 }
 
-.navbar ul li a:hover {
+.navbar ul li:hover {
   background-color: #ff8c00;
-  transition: 0.08s;
+  transition: 0.1s;
 }
 
-.dropdown-content {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  width: 100%;
-}
-
-.the_grid .navbar .dropdown-content li {
+.dropdown-class {
   display: none;
-  position: relative;
-}
-
-.navbar ul li:hover .dropdown-content {
-  position: absolute;
-  width: auto;
-  top: 100%;
-  z-index: 999;
-}
-
-.navbar ul li:hover .dropdown-content li {
-  display: block;
 }
 
 .navbar ul li:hover .dropdown-class {
   display: list-item;
-  position: absolute;
+  position: fixed;
   background: #ff8c00;
 }
 
 .navbar ul li:hover .dropdown-class ul {
   display: block;
-  margin: auto;
 }
 
 .navbar ul li:hover .dropdown-class ul li {
   font-size: 18px;
   width: auto;
-  padding: 10px;
   border-bottom: 1px ridge #fff;
   background: transparent;
   border-radius: 0;
   text-align: left;
+  transition: 0.5s;
+}
+
+.navbar ul li:hover .dropdown-class ul li:last-child {
+  border-bottom: none;
+}
+
+.navbar ul li:hover .dropdown-class ul li:hover {
+  background-color: tomato;
 }
 
 .sidebar {
   grid-area: sb;
-  overflow: hidden;
   min-width: 100%;
   max-width: 100%;
   border-style: dashed;
@@ -138,18 +134,8 @@ body {
 
 .content1 {
   grid-area: c1;
-  overflow: hidden;
   min-width: 100%;
   max-width: 100%;
   border-style: dashed;
   border-color: yellow;
-}
-
-.content2 {
-  grid-area: c2;
-  overflow: hidden;
-  min-width: 100%;
-  max-width: 100%;
-  border-style: dashed;
-  border-color: red;
 }

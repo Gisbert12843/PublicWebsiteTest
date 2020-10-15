@@ -1,0 +1,26 @@
+.the_grid {
+    display: grid;
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+
+    // border-style: solid;
+    // border-color: red;
+
+    // gap: 5px;
+    // grid-gap: 5px;
+
+    grid-template-columns: 0.6fr 1fr 1fr 1fr;
+    grid-template-rows: 0.22fr 1fr 1.5fr 0.5fr;
+
+    grid-template-areas:
+        "navb navb navb navb"
+        "sb c1 c1 c1"
+        "sb c1 c1 c1"
+        "sb c1 c1 c1";
+}

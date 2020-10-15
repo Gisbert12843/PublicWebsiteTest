@@ -1,11 +1,26 @@
-@import "global";
+@import "variables";
+@import "init";
+
+.snap-wrapper{
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+}
+.snap-wrapper .first_page{
+
+}
+
+
+
+@import "grid";
+@import "navbar";
 
 //! --------------------------------------------------------------
 
 
 .sidebar {
     grid-area: sb;
-    overflow: hidden;
+    // overflow: hidden;
 
     min-width: 100%;
     max-width: 100%;
@@ -15,20 +30,10 @@
 
 .content1 {
     grid-area: c1;
-    overflow: hidden;
+    // overflow: hidden;
 
     min-width: 100%;
     max-width: 100%;
     border-style: dashed;
     border-color: yellow;
-}
-
-.content2 {
-    grid-area: c2;
-    overflow: hidden;
-
-    min-width: 100%;
-    max-width: 100%;
-    border-style: dashed;
-    border-color: red;
 }
