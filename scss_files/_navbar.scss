@@ -1,13 +1,17 @@
 .navbar {
-    grid-area: navb;
+    // grid-area: navb;
     display: flex; //lets us align items
     // flex-wrap: wrap;
     // overflow: hidden;
     // position: relative;
     z-index: 1;
-
-    min-width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    min-width: 100vw;
     max-width: 100%;
+    // min-height: 8vh;
+    // max-height: 8vh;
     background-color: $navbar-color2;
 
     // text-align: center; //links in die horizontale mitte
@@ -59,7 +63,6 @@
     background: #ff8c00;
     // margin-top: 20px;
     // margin-left: -20px;
-
 }
 
 .navbar ul li:hover .dropdown-class ul {
