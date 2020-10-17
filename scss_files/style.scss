@@ -11,20 +11,22 @@
     .snap-box {
         width: 100%;
         min-height: 100vh;
-        overflow: hidden;
+        // overflow: hidden;
         display: flex;
-        // justify-content: center;
-        // align-items: center;
+
         margin-bottom: 5px;
         scroll-snap-align: start;
 
+        &:last-child {
+            margin-bottom: 0px;
+        }
         &.box_1 {
             background-color: #9c66d1;
             @import "navbar";
         }
 
         &.box_2 {
-            background-color: red;
+            background-color: rgb(122, 202, 255);
         }
     }
 }

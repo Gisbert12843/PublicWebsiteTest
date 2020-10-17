@@ -1,18 +1,33 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
 }
 
 html {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   font-size: 100%;
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
   background-color: transparent;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html {
+  scrollbar-width: none;
+  /* For Firefox */
+  -ms-overflow-style: none;
+  /* For Internet Explorer and Edge */
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  /* For Chrome, Safari, and Opera */
 }
 
 .snap-wrapper {
@@ -25,10 +40,13 @@ html {
 .snap-wrapper .snap-box {
   width: 100%;
   min-height: 100vh;
-  overflow: hidden;
   display: flex;
   margin-bottom: 5px;
   scroll-snap-align: start;
+}
+
+.snap-wrapper .snap-box:last-child {
+  margin-bottom: 0px;
 }
 
 .snap-wrapper .snap-box.box_1 {
@@ -45,7 +63,7 @@ html {
   display: flex;
   z-index: 1;
   position: relative;
-  min-width: 100vw;
+  min-width: 100%;
   max-width: 100%;
   background-color: #ff1a4f;
   justify-content: center;
@@ -80,7 +98,6 @@ html {
 
 .snap-wrapper .snap-box.box_1 .navbar ul li:hover {
   background-color: #ff8c00;
-  transition: 0.08s;
 }
 
 .snap-wrapper .snap-box.box_1 .dropdown-class {
@@ -116,5 +133,5 @@ html {
 }
 
 .snap-wrapper .snap-box.box_2 {
-  background-color: red;
+  background-color: #7acaff;
 }
