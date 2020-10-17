@@ -8,7 +8,7 @@
     display: flex; //lets us align items
     // flex-wrap: wrap;
     // overflow: hidden;
-    z-index: 1;
+    z-index: 999;
     position: relative;
     min-width: 100%;
     max-width: 100%;
@@ -62,8 +62,18 @@
 }
 
 .navbar ul li:hover .dropdown-class {
+    width: 38rem;
     display: list-item;
-    position: fixed;
+    position: absolute;
+    background: #ff8c00;
+    // margin-top: 20px;
+    // margin-left: -20px;
+}
+
+.navbar ul li:hover #more_dropdown {
+    width: auto;
+    display: list-item;
+    position: absolute;
     background: #ff8c00;
     // margin-top: 20px;
     // margin-left: -20px;
@@ -71,7 +81,6 @@
 
 .navbar ul li:hover .dropdown-class ul {
     display: block;
-    // margin: auto;
 }
 
 .navbar ul li:hover .dropdown-class ul li {

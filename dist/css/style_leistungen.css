@@ -6,7 +6,8 @@
   scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
   top: 0;
   left: 0;
   right: 0;
@@ -36,7 +37,7 @@ html {
   width: 100%;
   height: 100vh;
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 .snap-wrapper .snap-box {
@@ -45,10 +46,14 @@ html {
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
+  scroll-snap-align: center;
   flex-direction: column;
   margin-bottom: 5px;
-  scroll-snap-align: start;
-  background-image: url(/images/background2.jpg);
+  background-image: url(/images/chester-wade-0AlE0lFaKF8-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .snap-wrapper .snap-box:last-child {
@@ -63,7 +68,7 @@ html {
   width: 100%;
   height: 100%;
   display: flex;
-  z-index: 1;
+  z-index: 999;
   position: relative;
   min-width: 100%;
   max-width: 100%;
@@ -107,8 +112,16 @@ html {
 }
 
 .snap-wrapper .snap-box .navbar ul li:hover .dropdown-class {
+  width: 38rem;
   display: list-item;
-  position: fixed;
+  position: absolute;
+  background: #ff8c00;
+}
+
+.snap-wrapper .snap-box .navbar ul li:hover #more_dropdown {
+  width: auto;
+  display: list-item;
+  position: absolute;
   background: #ff8c00;
 }
 
@@ -135,7 +148,7 @@ html {
 
 .snap-wrapper .snap-box .content {
   height: 100%;
-  padding: 10rem 20rem 0 20rem;
+  padding: 10rem 25rem 0 25rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -150,15 +163,21 @@ html {
   flex-direction: column;
 }
 
+.snap-wrapper .snap-box .content .preisliste:first-child {
+  margin-top: 4rem;
+}
+
 .snap-wrapper .snap-box .content .preisliste .Katalogbeschreibung {
   text-align: center;
+  margin: 20px 70px;
 }
 
 .snap-wrapper .snap-box .content .preisliste .Katalogbeschreibung h2 {
   font-size: 4rem;
 }
 
-.snap-wrapper .snap-box .content .preisliste .Herren {
+.snap-wrapper .snap-box .content .preisliste .table {
+  scroll-margin-top: 40rem;
   min-width: 60%;
   align-self: center;
   padding-top: 5rem;
@@ -166,10 +185,9 @@ html {
   font-size: 2rem;
   margin: 10px 70px 70px;
   box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
-  /* Responsive */
 }
 
-.snap-wrapper .snap-box .content .preisliste .Herren .fl-table {
+.fl-table {
   border-radius: 5px;
   font-weight: normal;
   border: none;
@@ -177,39 +195,40 @@ html {
   width: 100%;
   max-width: 100%;
   white-space: nowrap;
-  background-color: white;
+  background-color: rgba(211, 211, 211, 0.5);
 }
 
-.snap-wrapper .snap-box .content .preisliste .Herren .fl-table td,
-.snap-wrapper .snap-box .content .preisliste .Herren .fl-table th {
+.fl-table td,
+.fl-table th {
   text-align: center;
   padding: 8px;
 }
 
-.snap-wrapper .snap-box .content .preisliste .Herren .fl-table td {
-  border-right: 1px solid #f8f8f8;
+.fl-table td {
+  border-right: 1px solid rgba(80, 80, 80, 0.5);
 }
 
-.snap-wrapper .snap-box .content .preisliste .Herren .fl-table thead th {
+.fl-table thead th {
   color: #ffffff;
   background: #4fc3a1;
 }
 
-.snap-wrapper .snap-box .content .preisliste .Herren .fl-table thead th:nth-child(odd) {
+.fl-table thead th:nth-child(odd) {
   color: #ffffff;
   background: #324960;
 }
 
-.snap-wrapper .snap-box .content .preisliste .Herren .fl-table tr:nth-child(even) {
-  background: #f8f8f8;
+.fl-table tr:nth-child(even) {
+  background: rgba(80, 80, 80, 0.5);
 }
 
+/* Responsive */
 @media (max-width: 767px) {
-  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table {
+  .fl-table {
     display: block;
     width: 100%;
   }
-  .snap-wrapper .snap-box .content .preisliste .Herren .table-wrapper:before {
+  .table-wrapper:before {
     content: "Scroll horizontally >";
     display: block;
     text-align: right;
@@ -217,24 +236,24 @@ html {
     color: white;
     padding: 0 0 10px;
   }
-  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table thead,
-  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table tbody,
-  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table thead th {
+  .fl-table thead,
+  .fl-table tbody,
+  .fl-table thead th {
     display: block;
   }
-  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table thead th:last-child {
+  .fl-table thead th:last-child {
     border-bottom: none;
   }
-  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table thead {
+  .fl-table thead {
     float: left;
   }
-  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table tbody {
+  .fl-table tbody {
     width: auto;
     position: relative;
     overflow-x: auto;
   }
-  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table td,
-  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table th {
+  .fl-table td,
+  .fl-table th {
     padding: 20px 0.625em 0.625em 0.625em;
     height: 60px;
     vertical-align: middle;
@@ -245,27 +264,27 @@ html {
     font-size: 13px;
     text-overflow: ellipsis;
   }
-  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table thead th {
+  .fl-table thead th {
     text-align: left;
     border-bottom: 1px solid #f7f7f9;
   }
-  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table tbody tr {
+  .fl-table tbody tr {
     display: table-cell;
   }
-  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table tbody tr:nth-child(odd) {
+  .fl-table tbody tr:nth-child(odd) {
     background: none;
   }
-  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table tr:nth-child(even) {
+  .fl-table tr:nth-child(even) {
     background: transparent;
   }
-  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table tr td:nth-child(odd) {
+  .fl-table tr td:nth-child(odd) {
     background: #f8f8f8;
     border-right: 1px solid #e6e4e4;
   }
-  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table tr td:nth-child(even) {
+  .fl-table tr td:nth-child(even) {
     border-right: 1px solid #e6e4e4;
   }
-  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table tbody td {
+  .fl-table tbody td {
     display: block;
     text-align: center;
   }

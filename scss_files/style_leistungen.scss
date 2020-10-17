@@ -5,8 +5,8 @@
     width: 100%;
     height: 100vh;
     overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    // scroll-behavior: smooth;
+    // scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
 
     .snap-box {
         width: 100%;
@@ -14,10 +14,18 @@
         overflow: hidden;
         display: flex;
         flex-wrap: wrap;
+        scroll-snap-align: center;
+
         flex-direction: column;
         margin-bottom: 5px;
-        scroll-snap-align: start;
-        background-image: url(/images/background2.jpg);
+        // scroll-snap-align: start;
+
+        background-image: url(/images/chester-wade-0AlE0lFaKF8-unsplash.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        // background-position: 0 6rem;
+        background-size: cover;
 
         &:last-child {
             margin-bottom: 0px;
@@ -28,8 +36,9 @@
 
         .content {
             // position: absolute;
+            // color: white;
             height: 100%;
-            padding: 10rem 20rem 0 20rem;
+            padding: 10rem 25rem 0 25rem;
             position: relative;
             display: flex;
 
@@ -39,21 +48,35 @@
             font-weight: 900;
 
             margin: 0 0 0 0;
-            // padding: 0 0 0 0;
+            // padding: 0 0 0 0;12843230697
+
             font-family: Verdana, Geneva, Tahoma, sans-serif;
 
             .preisliste {
                 display: flex;
-
                 flex-direction: column;
+
+                // background: inherit;
+                &:first-child{
+                    margin-top: 4rem;
+                }
+
+                .blurwrapper{
+
+                }
+
                 .Katalogbeschreibung {
                     // align-self: center;
                     text-align: center;
+                    margin: 20px 70px;
+
                     h2 {
                         font-size: 4rem;
                     }
                 }
-                .Herren {
+
+                .table {
+                    scroll-margin-top: 40rem;
                     min-width: 60%;
                     align-self: center;
 
@@ -63,114 +86,11 @@
 
                     margin: 10px 70px 70px;
                     box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
-
-                    .fl-table {
-                        border-radius: 5px;
-                        // font-size: 12px;
-                        font-weight: normal;
-                        border: none;
-                        border-collapse: collapse;
-                        width: 100%;
-                        max-width: 100%;
-                        white-space: nowrap;
-                        background-color: white;
-                    }
-
-                    .fl-table td,
-                    .fl-table th {
-                        text-align: center;
-                        padding: 8px;
-                    }
-
-                    .fl-table td {
-                        border-right: 1px solid #f8f8f8;
-                        // font-size: 12px;
-                    }
-
-                    .fl-table thead th {
-                        color: #ffffff;
-                        background: #4fc3a1;
-                    }
-
-                    .fl-table thead th:nth-child(odd) {
-                        color: #ffffff;
-                        background: #324960;
-                    }
-
-                    .fl-table tr:nth-child(even) {
-                        background: #f8f8f8;
-                    }
-
-                    /* Responsive */
-
-                    @media (max-width: 767px) {
-                        .fl-table {
-                            display: block;
-                            width: 100%;
-                        }
-                        .table-wrapper:before {
-                            content: "Scroll horizontally >";
-                            display: block;
-                            text-align: right;
-                            font-size: 11px;
-                            color: white;
-                            padding: 0 0 10px;
-                        }
-                        .fl-table thead,
-                        .fl-table tbody,
-                        .fl-table thead th {
-                            display: block;
-                        }
-                        .fl-table thead th:last-child {
-                            border-bottom: none;
-                        }
-                        .fl-table thead {
-                            float: left;
-                        }
-                        .fl-table tbody {
-                            width: auto;
-                            position: relative;
-                            overflow-x: auto;
-                        }
-                        .fl-table td,
-                        .fl-table th {
-                            padding: 20px 0.625em 0.625em 0.625em;
-                            height: 60px;
-                            vertical-align: middle;
-                            box-sizing: border-box;
-                            overflow-x: hidden;
-                            overflow-y: auto;
-                            width: 120px;
-                            font-size: 13px;
-                            text-overflow: ellipsis;
-                        }
-                        .fl-table thead th {
-                            text-align: left;
-                            border-bottom: 1px solid #f7f7f9;
-                        }
-                        .fl-table tbody tr {
-                            display: table-cell;
-                        }
-                        .fl-table tbody tr:nth-child(odd) {
-                            background: none;
-                        }
-                        .fl-table tr:nth-child(even) {
-                            background: transparent;
-                        }
-                        .fl-table tr td:nth-child(odd) {
-                            background: #f8f8f8;
-                            border-right: 1px solid #e6e4e4;
-                        }
-                        .fl-table tr td:nth-child(even) {
-                            border-right: 1px solid #e6e4e4;
-                        }
-                        .fl-table tbody td {
-                            display: block;
-                            text-align: center;
-                        }
-                    }
                 }
+
             }
         }
     }
 }
+
+@import "table";

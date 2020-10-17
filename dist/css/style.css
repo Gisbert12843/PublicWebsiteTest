@@ -6,7 +6,8 @@
   scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
   top: 0;
   left: 0;
   right: 0;
@@ -63,7 +64,7 @@ html {
   width: 100%;
   height: 100%;
   display: flex;
-  z-index: 1;
+  z-index: 999;
   position: relative;
   min-width: 100%;
   max-width: 100%;
@@ -107,8 +108,16 @@ html {
 }
 
 .snap-wrapper .snap-box.box_1 .navbar ul li:hover .dropdown-class {
+  width: 38rem;
   display: list-item;
-  position: fixed;
+  position: absolute;
+  background: #ff8c00;
+}
+
+.snap-wrapper .snap-box.box_1 .navbar ul li:hover #more_dropdown {
+  width: auto;
+  display: list-item;
+  position: absolute;
   background: #ff8c00;
 }
 
