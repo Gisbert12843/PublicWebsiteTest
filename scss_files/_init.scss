@@ -8,24 +8,28 @@
     // overflow: hidden;
 }
 
-html {
+html,body {
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     // height: 100%;
     // width: 100%;
-    font-size: 100%;
+    font-size: 10px;
     // box-sizing: border-box;
     padding: 0;
     margin: 0;
     // z-index: 0;
     background-color: transparent;
+    -webkit-font-smoothing: antialiased;
+
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
 html {
     scrollbar-width: none; /* For Firefox */
     -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    -webkit-font-smoothing: antialiased;
+
 }
 
 ::-webkit-scrollbar {

@@ -36,11 +36,12 @@
 .navbar ul li {
     // display: inline;
     position: relative;
+    font-size: 2.5rem;
 }
 
 .navbar ul li span,
 .navbar ul li a {
-    font-size: 1.5rem;
+    // font-size: 2.5rem;
     padding: 23px;
     display: block;
     position: relative;
@@ -74,8 +75,9 @@
 }
 
 .navbar ul li:hover .dropdown-class ul li {
-    font-size: 18px;
-    width: auto;
+    font-size: 2.5rem;
+    // text-shadow:2px 2px 2px black;
+    // width: auto;
     // padding: 10px;
     border-bottom: 1px ridge #fff;
     background: transparent;

@@ -6,15 +6,16 @@
   scroll-behavior: smooth;
 }
 
-html {
+html, body {
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  font-size: 100%;
+  font-size: 10px;
   padding: 0;
   margin: 0;
   background-color: transparent;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -23,6 +24,7 @@ html {
   /* For Firefox */
   -ms-overflow-style: none;
   /* For Internet Explorer and Edge */
+  -webkit-font-smoothing: antialiased;
 }
 
 ::-webkit-scrollbar {
@@ -42,6 +44,8 @@ html {
   min-height: 100vh;
   overflow: hidden;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   margin-bottom: 5px;
   scroll-snap-align: start;
 }
@@ -50,7 +54,7 @@ html {
   margin-bottom: 0px;
 }
 
-.snap-wrapper .snap-box.box_1 .navbar {
+.snap-wrapper .snap-box .navbar {
   top: 0;
   left: 0;
   right: 0;
@@ -67,24 +71,24 @@ html {
   align-items: center;
 }
 
-.snap-wrapper .snap-box.box_1 .active {
+.snap-wrapper .snap-box .active {
   background-color: #ff573a;
 }
 
-.snap-wrapper .snap-box.box_1 .navbar ul {
+.snap-wrapper .snap-box .navbar ul {
   list-style: none;
   display: flex;
   color: transparent;
   position: relative;
 }
 
-.snap-wrapper .snap-box.box_1 .navbar ul li {
+.snap-wrapper .snap-box .navbar ul li {
   position: relative;
+  font-size: 2.5rem;
 }
 
-.snap-wrapper .snap-box.box_1 .navbar ul li span,
-.snap-wrapper .snap-box.box_1 .navbar ul li a {
-  font-size: 1.5rem;
+.snap-wrapper .snap-box .navbar ul li span,
+.snap-wrapper .snap-box .navbar ul li a {
   padding: 23px;
   display: block;
   position: relative;
@@ -93,27 +97,26 @@ html {
   text-decoration: none;
 }
 
-.snap-wrapper .snap-box.box_1 .navbar ul li:hover {
+.snap-wrapper .snap-box .navbar ul li:hover {
   background-color: #ff8c00;
 }
 
-.snap-wrapper .snap-box.box_1 .dropdown-class {
+.snap-wrapper .snap-box .dropdown-class {
   display: none;
 }
 
-.snap-wrapper .snap-box.box_1 .navbar ul li:hover .dropdown-class {
+.snap-wrapper .snap-box .navbar ul li:hover .dropdown-class {
   display: list-item;
   position: fixed;
   background: #ff8c00;
 }
 
-.snap-wrapper .snap-box.box_1 .navbar ul li:hover .dropdown-class ul {
+.snap-wrapper .snap-box .navbar ul li:hover .dropdown-class ul {
   display: block;
 }
 
-.snap-wrapper .snap-box.box_1 .navbar ul li:hover .dropdown-class ul li {
-  font-size: 18px;
-  width: auto;
+.snap-wrapper .snap-box .navbar ul li:hover .dropdown-class ul li {
+  font-size: 2.5rem;
   border-bottom: 1px ridge #fff;
   background: transparent;
   border-radius: 0;
@@ -121,16 +124,144 @@ html {
   transition: 0.5s;
 }
 
-.snap-wrapper .snap-box.box_1 .navbar ul li:hover .dropdown-class ul li:last-child {
+.snap-wrapper .snap-box .navbar ul li:hover .dropdown-class ul li:last-child {
   border-bottom: none;
 }
 
-.snap-wrapper .snap-box.box_1 .navbar ul li:hover .dropdown-class ul li:hover {
+.snap-wrapper .snap-box .navbar ul li:hover .dropdown-class ul li:hover {
   background-color: tomato;
 }
 
-.preisliste {
-  position: absolute;
-  top: 200px;
-  left: 200px;
+.snap-wrapper .snap-box .content {
+  height: 100%;
+  padding: 10rem 20rem 0 20rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 0 0 0 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.snap-wrapper .snap-box .content .preisliste {
+  display: flex;
+  flex-direction: column;
+}
+
+.snap-wrapper .snap-box .content .preisliste .Katalogbeschreibung {
+  text-align: center;
+}
+
+.snap-wrapper .snap-box .content .preisliste .Katalogbeschreibung h2 {
+  font-size: 4rem;
+}
+
+.snap-wrapper .snap-box .content .preisliste .Herren {
+  min-width: 60%;
+  align-self: center;
+  padding-top: 5rem;
+  text-align: center;
+  font-size: 2rem;
+  margin: 10px 70px 70px;
+  box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+  /* Responsive */
+}
+
+.snap-wrapper .snap-box .content .preisliste .Herren .fl-table {
+  border-radius: 5px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: white;
+}
+
+.snap-wrapper .snap-box .content .preisliste .Herren .fl-table td, .snap-wrapper .snap-box .content .preisliste .Herren .fl-table th {
+  text-align: center;
+  padding: 8px;
+}
+
+.snap-wrapper .snap-box .content .preisliste .Herren .fl-table td {
+  border-right: 1px solid #f8f8f8;
+}
+
+.snap-wrapper .snap-box .content .preisliste .Herren .fl-table thead th {
+  color: #ffffff;
+  background: #4FC3A1;
+}
+
+.snap-wrapper .snap-box .content .preisliste .Herren .fl-table thead th:nth-child(odd) {
+  color: #ffffff;
+  background: #324960;
+}
+
+.snap-wrapper .snap-box .content .preisliste .Herren .fl-table tr:nth-child(even) {
+  background: #F8F8F8;
+}
+
+@media (max-width: 767px) {
+  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table {
+    display: block;
+    width: 100%;
+  }
+  .snap-wrapper .snap-box .content .preisliste .Herren .table-wrapper:before {
+    content: "Scroll horizontally >";
+    display: block;
+    text-align: right;
+    font-size: 11px;
+    color: white;
+    padding: 0 0 10px;
+  }
+  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table thead, .snap-wrapper .snap-box .content .preisliste .Herren .fl-table tbody, .snap-wrapper .snap-box .content .preisliste .Herren .fl-table thead th {
+    display: block;
+  }
+  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table thead th:last-child {
+    border-bottom: none;
+  }
+  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table thead {
+    float: left;
+  }
+  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table tbody {
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+  }
+  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table td, .snap-wrapper .snap-box .content .preisliste .Herren .fl-table th {
+    padding: 20px .625em .625em .625em;
+    height: 60px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 120px;
+    font-size: 13px;
+    text-overflow: ellipsis;
+  }
+  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table thead th {
+    text-align: left;
+    border-bottom: 1px solid #f7f7f9;
+  }
+  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table tbody tr {
+    display: table-cell;
+  }
+  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table tbody tr:nth-child(odd) {
+    background: none;
+  }
+  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table tr:nth-child(even) {
+    background: transparent;
+  }
+  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table tr td:nth-child(odd) {
+    background: #F8F8F8;
+    border-right: 1px solid #E6E4E4;
+  }
+  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table tr td:nth-child(even) {
+    border-right: 1px solid #E6E4E4;
+  }
+  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table tbody td {
+    display: block;
+    text-align: center;
+  }
 }
