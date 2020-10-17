@@ -48,6 +48,7 @@ html {
   flex-direction: column;
   margin-bottom: 5px;
   scroll-snap-align: start;
+  background-image: url(/images/background2.jpg);
 }
 
 .snap-wrapper .snap-box:last-child {
@@ -179,7 +180,8 @@ html {
   background-color: white;
 }
 
-.snap-wrapper .snap-box .content .preisliste .Herren .fl-table td, .snap-wrapper .snap-box .content .preisliste .Herren .fl-table th {
+.snap-wrapper .snap-box .content .preisliste .Herren .fl-table td,
+.snap-wrapper .snap-box .content .preisliste .Herren .fl-table th {
   text-align: center;
   padding: 8px;
 }
@@ -190,7 +192,7 @@ html {
 
 .snap-wrapper .snap-box .content .preisliste .Herren .fl-table thead th {
   color: #ffffff;
-  background: #4FC3A1;
+  background: #4fc3a1;
 }
 
 .snap-wrapper .snap-box .content .preisliste .Herren .fl-table thead th:nth-child(odd) {
@@ -199,7 +201,7 @@ html {
 }
 
 .snap-wrapper .snap-box .content .preisliste .Herren .fl-table tr:nth-child(even) {
-  background: #F8F8F8;
+  background: #f8f8f8;
 }
 
 @media (max-width: 767px) {
@@ -215,7 +217,9 @@ html {
     color: white;
     padding: 0 0 10px;
   }
-  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table thead, .snap-wrapper .snap-box .content .preisliste .Herren .fl-table tbody, .snap-wrapper .snap-box .content .preisliste .Herren .fl-table thead th {
+  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table thead,
+  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table tbody,
+  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table thead th {
     display: block;
   }
   .snap-wrapper .snap-box .content .preisliste .Herren .fl-table thead th:last-child {
@@ -229,8 +233,9 @@ html {
     position: relative;
     overflow-x: auto;
   }
-  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table td, .snap-wrapper .snap-box .content .preisliste .Herren .fl-table th {
-    padding: 20px .625em .625em .625em;
+  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table td,
+  .snap-wrapper .snap-box .content .preisliste .Herren .fl-table th {
+    padding: 20px 0.625em 0.625em 0.625em;
     height: 60px;
     vertical-align: middle;
     box-sizing: border-box;
@@ -254,11 +259,11 @@ html {
     background: transparent;
   }
   .snap-wrapper .snap-box .content .preisliste .Herren .fl-table tr td:nth-child(odd) {
-    background: #F8F8F8;
-    border-right: 1px solid #E6E4E4;
+    background: #f8f8f8;
+    border-right: 1px solid #e6e4e4;
   }
   .snap-wrapper .snap-box .content .preisliste .Herren .fl-table tr td:nth-child(even) {
-    border-right: 1px solid #E6E4E4;
+    border-right: 1px solid #e6e4e4;
   }
   .snap-wrapper .snap-box .content .preisliste .Herren .fl-table tbody td {
     display: block;

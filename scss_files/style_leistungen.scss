@@ -17,6 +17,7 @@
         flex-direction: column;
         margin-bottom: 5px;
         scroll-snap-align: start;
+        background-image: url(/images/background2.jpg);
 
         &:last-child {
             margin-bottom: 0px;
@@ -43,7 +44,6 @@
 
             .preisliste {
                 display: flex;
-                
 
                 flex-direction: column;
                 .Katalogbeschreibung {
@@ -61,11 +61,9 @@
                     text-align: center;
                     font-size: 2rem;
 
-
                     margin: 10px 70px 70px;
-                    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
-                 
-                    
+                    box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+
                     .fl-table {
                         border-radius: 5px;
                         // font-size: 12px;
@@ -77,40 +75,40 @@
                         white-space: nowrap;
                         background-color: white;
                     }
-                    
-                    .fl-table td, .fl-table th {
+
+                    .fl-table td,
+                    .fl-table th {
                         text-align: center;
                         padding: 8px;
                     }
-                    
+
                     .fl-table td {
                         border-right: 1px solid #f8f8f8;
                         // font-size: 12px;
                     }
-                    
+
                     .fl-table thead th {
                         color: #ffffff;
-                        background: #4FC3A1;
+                        background: #4fc3a1;
                     }
-                    
-                    
+
                     .fl-table thead th:nth-child(odd) {
                         color: #ffffff;
                         background: #324960;
                     }
-                    
+
                     .fl-table tr:nth-child(even) {
-                        background: #F8F8F8;
+                        background: #f8f8f8;
                     }
-                    
+
                     /* Responsive */
-                    
+
                     @media (max-width: 767px) {
                         .fl-table {
                             display: block;
                             width: 100%;
                         }
-                        .table-wrapper:before{
+                        .table-wrapper:before {
                             content: "Scroll horizontally >";
                             display: block;
                             text-align: right;
@@ -118,10 +116,12 @@
                             color: white;
                             padding: 0 0 10px;
                         }
-                        .fl-table thead, .fl-table tbody, .fl-table thead th {
+                        .fl-table thead,
+                        .fl-table tbody,
+                        .fl-table thead th {
                             display: block;
                         }
-                        .fl-table thead th:last-child{
+                        .fl-table thead th:last-child {
                             border-bottom: none;
                         }
                         .fl-table thead {
@@ -132,8 +132,9 @@
                             position: relative;
                             overflow-x: auto;
                         }
-                        .fl-table td, .fl-table th {
-                            padding: 20px .625em .625em .625em;
+                        .fl-table td,
+                        .fl-table th {
+                            padding: 20px 0.625em 0.625em 0.625em;
                             height: 60px;
                             vertical-align: middle;
                             box-sizing: border-box;
@@ -157,11 +158,11 @@
                             background: transparent;
                         }
                         .fl-table tr td:nth-child(odd) {
-                            background: #F8F8F8;
-                            border-right: 1px solid #E6E4E4;
+                            background: #f8f8f8;
+                            border-right: 1px solid #e6e4e4;
                         }
                         .fl-table tr td:nth-child(even) {
-                            border-right: 1px solid #E6E4E4;
+                            border-right: 1px solid #e6e4e4;
                         }
                         .fl-table tbody td {
                             display: block;
