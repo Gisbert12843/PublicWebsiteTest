@@ -1,4 +1,5 @@
 .navbar {
+
     top: 0;
     left: 0;
     right: 0;
@@ -36,7 +37,9 @@
 .navbar ul li {
     // display: inline;
     position: relative;
-    font-size: 2.5rem;
+    font-size: $font-size;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
 }
 
 .navbar ul li span,
@@ -65,7 +68,7 @@
     width: 38rem;
     display: list-item;
     position: absolute;
-    background: #ff8c00;
+    background-color: $hover-color;
     // margin-top: 20px;
     // margin-left: -20px;
 }
@@ -74,7 +77,7 @@
     width: auto;
     display: list-item;
     position: absolute;
-    background: #ff8c00;
+    background-color: $hover-color;
     // margin-top: 20px;
     // margin-left: -20px;
 }
@@ -101,4 +104,10 @@
 
 .navbar ul li:hover .dropdown-class ul li:hover {
     background-color: tomato;
+}
+
+
+a[ id= "Herren" ]:target ~ #main article.panel {
+    -webkit-transform: translateY( 0px);
+    transform: translateY( 0px );
 }

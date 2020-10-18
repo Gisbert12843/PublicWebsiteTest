@@ -26,6 +26,10 @@ html {
   -ms-overflow-style: none;
   /* For Internet Explorer and Edge */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  text-rendering: optimizelegibility !important;
 }
 
 ::-webkit-scrollbar {
@@ -86,7 +90,9 @@ html {
 
 .snap-wrapper .snap-box.box_1 .navbar ul li {
   position: relative;
-  font-size: 2.5rem;
+  font-size: 2.6rem;
+  line-height: 3.5rem;
+  letter-spacing: 0.13rem;
 }
 
 .snap-wrapper .snap-box.box_1 .navbar ul li span,
@@ -95,7 +101,7 @@ html {
   display: block;
   position: relative;
   z-index: 1;
-  color: #e4e4e4;
+  color: #e2e2e2;
   text-decoration: none;
 }
 
@@ -111,14 +117,14 @@ html {
   width: 38rem;
   display: list-item;
   position: absolute;
-  background: #ff8c00;
+  background-color: #ff8c00;
 }
 
 .snap-wrapper .snap-box.box_1 .navbar ul li:hover #more_dropdown {
   width: auto;
   display: list-item;
   position: absolute;
-  background: #ff8c00;
+  background-color: #ff8c00;
 }
 
 .snap-wrapper .snap-box.box_1 .navbar ul li:hover .dropdown-class ul {
@@ -140,6 +146,10 @@ html {
 
 .snap-wrapper .snap-box.box_1 .navbar ul li:hover .dropdown-class ul li:hover {
   background-color: tomato;
+}
+
+.snap-wrapper .snap-box.box_1 a[id="Herren"]:target ~ #main article.panel {
+  transform: translateY(0px);
 }
 
 .snap-wrapper .snap-box.box_2 {

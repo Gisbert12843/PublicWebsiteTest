@@ -26,6 +26,10 @@ html {
   -ms-overflow-style: none;
   /* For Internet Explorer and Edge */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  text-rendering: optimizelegibility !important;
 }
 
 ::-webkit-scrollbar {
@@ -48,7 +52,7 @@ html {
   flex-wrap: wrap;
   scroll-snap-align: center;
   flex-direction: column;
-  margin-bottom: 5px;
+  padding-bottom: 1rem;
   background-image: url(/images/chester-wade-0AlE0lFaKF8-unsplash.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -90,7 +94,9 @@ html {
 
 .snap-wrapper .snap-box .navbar ul li {
   position: relative;
-  font-size: 2.5rem;
+  font-size: 2.6rem;
+  line-height: 3.5rem;
+  letter-spacing: 0.13rem;
 }
 
 .snap-wrapper .snap-box .navbar ul li span,
@@ -99,7 +105,7 @@ html {
   display: block;
   position: relative;
   z-index: 1;
-  color: #e4e4e4;
+  color: #e2e2e2;
   text-decoration: none;
 }
 
@@ -115,14 +121,14 @@ html {
   width: 38rem;
   display: list-item;
   position: absolute;
-  background: #ff8c00;
+  background-color: #ff8c00;
 }
 
 .snap-wrapper .snap-box .navbar ul li:hover #more_dropdown {
   width: auto;
   display: list-item;
   position: absolute;
-  background: #ff8c00;
+  background-color: #ff8c00;
 }
 
 .snap-wrapper .snap-box .navbar ul li:hover .dropdown-class ul {
@@ -146,6 +152,10 @@ html {
   background-color: tomato;
 }
 
+.snap-wrapper .snap-box a[id="Herren"]:target ~ #main article.panel {
+  transform: translateY(0px);
+}
+
 .snap-wrapper .snap-box .content {
   color: white;
   height: 100%;
@@ -167,12 +177,14 @@ html {
 }
 
 .snap-wrapper .snap-box .content .preisliste .blurwrapper {
+  scroll-margin-top: 200rem;
   display: flex;
   position: relative;
   background: inherit;
   border-radius: 1rem;
   overflow: hidden;
   justify-content: center;
+  transition: transform 2.6s ease-in-out;
 }
 
 .snap-wrapper .snap-box .content .preisliste .blurwrapper::after {

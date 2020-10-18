@@ -7,7 +7,6 @@
     scroll-behavior: smooth;
     // background: inherit;
 
-
     // overflow: hidden;
 }
 
@@ -34,6 +33,10 @@ html {
     scrollbar-width: none; /* For Firefox */
     -ms-overflow-style: none; /* For Internet Explorer and Edge */
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-font-smoothing: antialiased !important;
+    text-rendering: optimizelegibility !important;
 }
 
 ::-webkit-scrollbar {
