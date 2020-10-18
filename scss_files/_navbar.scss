@@ -1,5 +1,4 @@
 .navbar {
-
     top: 0;
     left: 0;
     right: 0;
@@ -44,8 +43,15 @@
 
 .navbar ul li span,
 .navbar ul li a {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
     // font-size: 2.5rem;
-    padding: 23px;
+    padding: 2.3rem;
     display: block;
     position: relative;
     z-index: 1;
@@ -65,12 +71,13 @@
 }
 
 .navbar ul li:hover .dropdown-class {
-    width: 38rem;
+    width: 40rem;
     display: list-item;
     position: absolute;
     background-color: $hover-color;
     // margin-top: 20px;
     // margin-left: -20px;
+    // line-height: 0.1rem;
 }
 
 .navbar ul li:hover #more_dropdown {
@@ -90,12 +97,13 @@
     font-size: 2.5rem;
     // text-shadow:2px 2px 2px black;
     // width: auto;
-    // padding: 10px;
-    border-bottom: 1px ridge #fff;
+    // padding: -3rem;
+    border-bottom: 0.1rem ridge #fff;
     background: transparent;
     border-radius: 0;
     text-align: left;
-    transition: 0.5s;
+    line-height: 1.5rem; //Höhe/Länge des Dropdowns
+    // letter-spacing: 0.02rem;
 }
 
 .navbar ul li:hover .dropdown-class ul li:last-child {
@@ -104,10 +112,4 @@
 
 .navbar ul li:hover .dropdown-class ul li:hover {
     background-color: tomato;
-}
-
-
-a[ id= "Herren" ]:target ~ #main article.panel {
-    -webkit-transform: translateY( 0px);
-    transform: translateY( 0px );
 }

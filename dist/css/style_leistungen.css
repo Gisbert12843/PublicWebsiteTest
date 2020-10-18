@@ -101,7 +101,9 @@ html {
 
 .snap-wrapper .snap-box .navbar ul li span,
 .snap-wrapper .snap-box .navbar ul li a {
-  padding: 23px;
+  -webkit-touch-callout: none;
+  user-select: none;
+  padding: 2.3rem;
   display: block;
   position: relative;
   z-index: 1;
@@ -118,7 +120,7 @@ html {
 }
 
 .snap-wrapper .snap-box .navbar ul li:hover .dropdown-class {
-  width: 38rem;
+  width: 40rem;
   display: list-item;
   position: absolute;
   background-color: #ff8c00;
@@ -137,11 +139,11 @@ html {
 
 .snap-wrapper .snap-box .navbar ul li:hover .dropdown-class ul li {
   font-size: 2.5rem;
-  border-bottom: 1px ridge #fff;
+  border-bottom: 0.1rem ridge #fff;
   background: transparent;
   border-radius: 0;
   text-align: left;
-  transition: 0.5s;
+  line-height: 1.5rem;
 }
 
 .snap-wrapper .snap-box .navbar ul li:hover .dropdown-class ul li:last-child {
@@ -150,10 +152,6 @@ html {
 
 .snap-wrapper .snap-box .navbar ul li:hover .dropdown-class ul li:hover {
   background-color: tomato;
-}
-
-.snap-wrapper .snap-box a[id="Herren"]:target ~ #main article.panel {
-  transform: translateY(0px);
 }
 
 .snap-wrapper .snap-box .content {
