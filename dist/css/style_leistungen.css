@@ -147,10 +147,12 @@ html {
 }
 
 .snap-wrapper .snap-box .content {
+  color: white;
   height: 100%;
   padding: 10rem 25rem 0 25rem;
   position: relative;
   display: flex;
+  background: inherit;
   flex-direction: column;
   font-size: 2rem;
   font-weight: 900;
@@ -161,10 +163,33 @@ html {
 .snap-wrapper .snap-box .content .preisliste {
   display: flex;
   flex-direction: column;
+  background: inherit;
 }
 
-.snap-wrapper .snap-box .content .preisliste:first-child {
-  margin-top: 4rem;
+.snap-wrapper .snap-box .content .preisliste .blurwrapper {
+  display: flex;
+  position: relative;
+  background: inherit;
+  border-radius: 1rem;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.snap-wrapper .snap-box .content .preisliste .blurwrapper::after {
+  content: "";
+  background: inherit;
+  position: absolute;
+  left: -25px;
+  top: -25px;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.08);
+  filter: blur(10px);
+}
+
+.snap-wrapper .snap-box .content .preisliste .blurwrapper * {
+  position: relative;
+  z-index: 1;
 }
 
 .snap-wrapper .snap-box .content .preisliste .Katalogbeschreibung {
@@ -177,14 +202,10 @@ html {
 }
 
 .snap-wrapper .snap-box .content .preisliste .table {
-  scroll-margin-top: 40rem;
   min-width: 60%;
-  align-self: center;
-  padding-top: 5rem;
-  text-align: center;
+  padding-top: 2rem;
   font-size: 2rem;
-  margin: 10px 70px 70px;
-  box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+  margin: 1rem 35rem 7rem;
 }
 
 .fl-table {
@@ -196,6 +217,10 @@ html {
   max-width: 100%;
   white-space: nowrap;
   background-color: rgba(211, 211, 211, 0.5);
+}
+
+.fl-table caption {
+  padding-bottom: 2rem;
 }
 
 .fl-table td,
@@ -223,69 +248,3 @@ html {
 }
 
 /* Responsive */
-@media (max-width: 767px) {
-  .fl-table {
-    display: block;
-    width: 100%;
-  }
-  .table-wrapper:before {
-    content: "Scroll horizontally >";
-    display: block;
-    text-align: right;
-    font-size: 11px;
-    color: white;
-    padding: 0 0 10px;
-  }
-  .fl-table thead,
-  .fl-table tbody,
-  .fl-table thead th {
-    display: block;
-  }
-  .fl-table thead th:last-child {
-    border-bottom: none;
-  }
-  .fl-table thead {
-    float: left;
-  }
-  .fl-table tbody {
-    width: auto;
-    position: relative;
-    overflow-x: auto;
-  }
-  .fl-table td,
-  .fl-table th {
-    padding: 20px 0.625em 0.625em 0.625em;
-    height: 60px;
-    vertical-align: middle;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: auto;
-    width: 120px;
-    font-size: 13px;
-    text-overflow: ellipsis;
-  }
-  .fl-table thead th {
-    text-align: left;
-    border-bottom: 1px solid #f7f7f9;
-  }
-  .fl-table tbody tr {
-    display: table-cell;
-  }
-  .fl-table tbody tr:nth-child(odd) {
-    background: none;
-  }
-  .fl-table tr:nth-child(even) {
-    background: transparent;
-  }
-  .fl-table tr td:nth-child(odd) {
-    background: #f8f8f8;
-    border-right: 1px solid #e6e4e4;
-  }
-  .fl-table tr td:nth-child(even) {
-    border-right: 1px solid #e6e4e4;
-  }
-  .fl-table tbody td {
-    display: block;
-    text-align: center;
-  }
-}
