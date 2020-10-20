@@ -1,3 +1,5 @@
+<?php Header("Cache-Control: max-age=3000, must-revalidate"); ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -8,7 +10,9 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     <link rel='stylesheet' type='text/css' media='screen' href='/dist/css/style_leistungen.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/dist/resources/locomotive-scroll.min.css'>
 
+    <script src="/dist/resources/locomotive-scroll.min.js"></script>
     <script src="https://kit.fontawesome.com/369fd6a54c.js" crossorigin="anonymous"></script>
 
 
@@ -27,8 +31,8 @@
                         <div class="dropdown-class">
                             <ul class="dropdown-content">
                                 <li><a href="/dist/htmls/leistungen.html#Herren">Herren</a></li>
-                                <li><a href="/dist/htmls/leistungen.html">Damen</a></li>
-                                <li><a href="/dist/htmls/leistungen.html">Jugend und Kinder</a></li>
+                                <li><a href="/dist/htmls/leistungen.html#Damen">Damen</a></li>
+                                <li><a href="/dist/htmls/leistungen.html#Jugend_Kinder">Jugend und Kinder</a></li>
                                 <li><a href="/dist/htmls/leistungen.html">Farben und Strähnen</a></li>
                                 <li><a href="/dist/htmls/leistungen.html">Wellen und Glätten</a></li>
                                 <li><a href="/dist/htmls/leistungen.html">Extension | Perücken | Toupets</a></li>
@@ -64,7 +68,7 @@
                         </div>
                     </div>
                     <br>
-                    <div class="blurwrapper Herren" id="Herren">
+                    <div class="blurwrapper Herren" id="scroll-Herren">
                         <div class="table">
                             <table class="fl-table">
                                 <caption>Herren</caption>
@@ -97,7 +101,7 @@
                     </div>
 
                     <br>
-                    <div class="blurwrapper Damen" id="Damen">
+                    <div class="blurwrapper Damen" id="scroll-Damen">
                         <div class="table">
                             <table class="fl-table">
                                 <caption>Damen</caption>
@@ -130,7 +134,7 @@
                     </div>
 
                     <br>
-                    <div class="blurwrapper Jugend_Kinder" id="Jugend_Kinder">
+                    <div class="blurwrapper Jugend_Kinder" id="scroll-Jugend_Kinder">
                         <div class="table">
                             <table class="fl-table">
                                 <caption>Jugend und Kinder</caption>
@@ -162,7 +166,7 @@
                         </div>
                     </div>
                     <br>
-                    <div class="blurwrapper Farben_Strähnen" id="Farben_Strähnen">
+                    <div class="blurwrapper Farben_Strähnen" id="scroll-Farben_Strähnen">
                         <div class="table">
                             <table class="fl-table">
                                 <caption>Farben und Strähnen</caption>
@@ -194,7 +198,7 @@
                         </div>
                     </div>
                     <br>
-                    <div class="blurwrapper Wellen_Glätten" id="Wellen_Glätten">
+                    <div class="blurwrapper Wellen_Glätten" id="scroll-Wellen_Glätten">
                         <div class="table">
                             <table class="fl-table">
                                 <caption>Wellen und Glätten</caption>
@@ -234,8 +238,22 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-    <script type="text/javascript" src="/dist/js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            let page_url = window.location.href;
+            let page_id = page_url.substring(page_url.lastIndexOf("#") + 1);
+            // alert(page_id);
+            if (page_id == "Jugend_Kinder") {
+                $("html, body").animate({
+                    scrollTop: $("#scroll-" + page_id).offset().top
+                }, 1000);
+            }
+
+        });
+    </script>
 </body>
 
 </html>
+
