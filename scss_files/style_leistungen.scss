@@ -18,7 +18,8 @@
         flex-direction: column;
         padding-bottom: 1rem;
 
-        background-image: url(/images/chester-wade-0AlE0lFaKF8-unsplash.jpg);
+        background-color: $backgroundcolor1;
+        // background-image: url(/images/chester-wade-0AlE0lFaKF8-unsplash.jpg);
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
@@ -57,9 +58,7 @@
 
                 background: inherit;
 
-                &:first-child {
-                    // margin-top: 4rem;
-                }
+
 
                 .blurwrapper {
                     scroll-margin-top: 200rem;
